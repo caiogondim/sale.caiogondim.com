@@ -43,6 +43,11 @@
        
       .product__img {
         border-radius: 2px;
+        width: 100%;
+      }
+      
+      .product-photos .row:first-child {
+        margin-bottom: 3%;
       }
        
       /* -----------------------------------------------------------------------
@@ -56,26 +61,45 @@
   <body>
       <section class="product-photos container">
         <h2>{{ page.product_name }}</h2>
-        <div class="row">
-          <div class="one-half column">
-            <a href="">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-          </div>
-          <div class="one-half column">
-            <a href="">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="twelve columns">
-            <a href="" class="u-max-full-width">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-          </div>
-        </div>
         
+        {% for photo in page.product.photos %}
+          {% assign loop_index = forloop.index %}
+          {% assign loop_index_mod_2 = forloop.index | modulo: 2 %}
+          
+          {% if loop_index == 1 %}
+            <div class="row">
+              <div class="twelve columns">
+                <a href="{{ photo }}" class="u-max-full-width">
+                  <img
+                    src="{{ photo }}"
+                    alt="{{ page.product_name }}"
+                    class="u-max-full-width product__img"
+                  />
+                </a>
+              </div>
+            </div>
+          {% else %}
+            {% if loop_index_mod_2 == 0 %}
+              <div class="row">
+            {% endif %}
+            
+              <div class="one-half column {{loop_index_mod_2 }}">
+                <a href="{{ photo }}" class="u-max-full-width">
+                  <img
+                    src="{{ photo }}"
+                    alt="{{ page.product_name }}"
+                    class="u-max-full-width product__img"
+                  />
+                </a>
+              </div>
+            
+            {% if loop_index_mod_2 == 1 %}
+              </div>
+            {% endif %}
+            
+          {% endif %}
+          
+        {% endfor %}
         
       </section>
       
