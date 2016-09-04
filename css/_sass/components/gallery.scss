@@ -1,0 +1,10 @@
+.gallery__photo {
+  @media (max-width: 800px) {
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+  
+  &.columns.twelve {
+    margin-bottom: 0;
+  }
+}

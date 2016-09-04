@@ -19,7 +19,7 @@ layout: base
     
     {% if loop_index == 1 %}
       <div class="row product__gallery-row">
-        <div class="twelve columns">
+        <div class="twelve columns gallery__photo">
           <a href="{{ photo }}" class="u-max-full-width">
             <img
               src="{{ photo }}"
@@ -34,7 +34,7 @@ layout: base
         <div class="row product__gallery-row">
       {% endif %}
       
-        <div class="one-half column {{loop_index_mod_2 }}">
+        <div class="one-half column gallery__photo">
           <a href="{{ photo }}" class="u-max-full-width">
             <img
               src="{{ photo }}"
