@@ -73,94 +73,50 @@
     </style>
   </head>
   <body>
-      <div class="header__wrapper">
-        <section class="header container">
-          <div class=" row">
-            <h1>Farewell sale</h1>
-          </div>
-          <p class="row">
-            
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-            officiis vel ex facere animi hic praesentium optio minus veritatis
-            magnam cumque repudiandae reprehenderit debitis, nostrum inventore
-            esse dignissimos nihil quasi.
-            
-          </p>
-        </section>
-      </div>
+    <div class="header__wrapper">
+      <section class="header container">
+        <div class=" row">
+          <h1>Farewell sale</h1>
+        </div>
+        <p class="row">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+          officiis vel ex facere animi hic praesentium optio minus veritatis
+          magnam cumque repudiandae reprehenderit debitis, nostrum inventore
+          esse dignissimos nihil quasi.
+        </p>
+      </section>
+    </div>
       
-      <hr>
+    <hr>
       
-      <section class="products container">
-        <h2>Products</h2>
-        <div class="product-row row">
-          {% for product in site.products %}
-            <div class="product one-half column">
-              <a href="">
-                <img
-                  src="/img/{{ product.photo }}"
-                  alt="{{ product.title }}"
-                  class="u-max-full-width product__img"
-                />
-              </a>
-              <h3>{{ product.name }}</h3>
-              <p class="product__retail-price">€ {{ product.price_retail}}</p>
-              <h4 class="product__selling-price">€ {{ porduct.price }}</h4>
-              <div class="row">
-                <a href="#" class="button">View details</a>
+    <section class="products container">
+      <h2>Products</h2>
+        {% for product in site.products %}
+          {% assign loop_index = forloop.index | modulo: 2 %}
+          {% if loop_index == 1 %}
+            <div class="product-row row">
+          {% else %}
+            </div>
+            <div class="product-row row">
+          {% endif %}
+              <div class="product one-half column">
+                <a href="{{ product.link }}">
+                  <img
+                    src="/img/{{ product.photo }}"
+                    alt="{{ product.title }}"
+                    class="u-max-full-width product__img"
+                  />
+                </a>
+                <h3>{{ product.name }}</h3>
+                <p class="product__retail-price">€ {{ product.price_retail}}</p>
+                <h4 class="product__selling-price">€ {{ product.price }}</h4>
+                <div class="row">
+                  <a href="{{ product.link }}" class="button">View details</a>
+                </div>
               </div>
             </div>
-          {% endfor %}
-          <div class="product one-half column">
-            <a href="">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-            <h3>Thunderbolt display</h3>
-            <p class="product__retail-price">€ 20,00</p>
-            <h4 class="product__selling-price">€ 10,00</h4>
-            <div class="row">
-              <a href="#" class="button">View details</a>
-            </div>
-          </div>
-          <div class="product one-half column">
-            <a href="">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-            <h3>Thunderbolt display</h3>
-            <p class="product__retail-price">€ 20,00</p>
-            <h4 class="product__selling-price">€ 10,00</h4>
-            <div class="row">
-              <a href="#" class="button">View details</a>
-            </div>
-          </div>
-        </div>
-          
-        <div class="product-row row">
-          <div class="product one-half column">
-            <a href="">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-            <h3>Thunderbolt display</h3>
-            <p class="product__retail-price">€ 20,00</p>
-            <h4 class="product__selling-price">€ 10,00</h4>
-            <div class="row">
-              <a href="#" class="button">View details</a>
-            </div>
-          </div>
-          <div class="product one-half column">
-            <a href="">
-              <img src="http://lorempixel.com/800/450/" alt="" class="u-max-full-width product__img">
-            </a>
-            <h3>Thunderbolt display</h3>
-            <p class="product__retail-price">€ 20,00</p>
-            <h4 class="product__selling-price">€ 10,00</h4>
-            <div class="row">
-              <a href="#" class="button">View details</a>
-            </div>
-          </div>
-        </div>
-        
-      </section>
-    
+        {% endfor %}
+    </section>
+
   </body>
 </html>

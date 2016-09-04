@@ -1,0 +1,3 @@
+## Tasks
+
+- `bundle exec jekyll`
