@@ -1,6 +1,6 @@
 ---
 layout: product-detail
-product_name: 'Canon Pixma MX925'
+name: 'Canon Pixma MX925'
 price_retail: 250
 price: 100
 categories: available

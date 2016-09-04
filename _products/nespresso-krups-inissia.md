@@ -1,6 +1,6 @@
 ---
 layout: product-detail
-product_name: 'Nespresso Krups Inissia'
+name: 'Nespresso Krups Inissia'
 price_retail: 250
 price: 100
 categories: available

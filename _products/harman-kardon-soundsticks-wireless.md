@@ -1,6 +1,6 @@
 ---
 layout: product-detail
-product_name: 'Harman Kardon Soundsticks wireless'
+name: 'Harman Kardon Soundsticks wireless'
 price_retail: 250
 price: 100
 categories: available

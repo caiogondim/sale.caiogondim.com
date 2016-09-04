@@ -2,7 +2,7 @@
 layout: base
 ---
 <section class="product-photos container">
-  <h2>{{ page.product_name }}</h2>
+  <h2>{{ page.name }}</h2>
   
   {% for photo in page.photos %}
     {% assign loop_index = forloop.index %}
@@ -14,7 +14,7 @@ layout: base
           <a href="{{ photo }}" class="u-max-full-width">
             <img
               src="{{ photo }}"
-              alt="{{ page.product_name }}"
+              alt="{{ page.name }}"
               class="u-max-full-width product__img"
             />
           </a>
