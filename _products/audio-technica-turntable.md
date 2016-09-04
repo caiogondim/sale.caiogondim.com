@@ -6,7 +6,7 @@ price: 180
 categories: available
 photos:
   - '/img/audio-technica-at-lp1.jpg'
-link: '/products/audio-technica-at-lp1.html'
+link: '/products/audio-technica-turntable.html'
 description: 'Classic turntable.'
 details:
   - 'Audio Technica AT-LP120-USBHC'
