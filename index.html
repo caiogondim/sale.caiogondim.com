@@ -93,11 +93,10 @@
       <h2>Products</h2>
         {% for product in site.products %}
           {% assign loop_index = forloop.index | modulo: 2 %}
-          {% if loop_index == 1 %}
+          {% if loop_index == 0 %}
             <div class="product-row row">
           {% else %}
             </div>
-            <div class="product-row row">
           {% endif %}
               <div class="product one-half column">
                 <a href="{{ product.link }}">
