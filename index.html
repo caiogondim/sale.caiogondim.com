@@ -19,7 +19,7 @@ layout: base
   
 <hr>
   
-<section class="products container">
+<section class="products container" id="products">
   <h2>Products</h2>
     {% for product in site.products %}
       {% assign loop_index = forloop.index | modulo: 2 %}

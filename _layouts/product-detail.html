@@ -3,6 +3,11 @@ layout: base
 ---
 <section class="product-photos container">
   <h2>{{ page.name }}</h2>
+  <div class="row">
+    <p>
+      {{ page.description }}
+    </p>
+  </div>
   
   {% for photo in page.photos %}
     {% assign loop_index = forloop.index %}
@@ -43,6 +48,9 @@ layout: base
     
   {% endfor %}
   
+  
+  
+  
 </section>
 
 <section class="product-price container">
@@ -52,14 +60,16 @@ layout: base
   <a href="" class="button button-primary">Buy</a>
 </section>
 
-<section class="product-details container">
-  <h3>Details</h3>
-  <ul>
-    <li>Lorem</li>
-    <li>Ipsum</li>
-    <li>Dolor</li>
-  </ul>
-</section>
+{% if page.details %}
+  <section class="product-details container">
+    <h3>Details</h3>
+    <ul>
+      {% for detail in page.details %}
+        <li>{{ detail }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
 
 <hr>
 
