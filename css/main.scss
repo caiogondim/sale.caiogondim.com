@@ -19,8 +19,18 @@
 body {
   color: #393939;
 }
-.header__wrapper {
-  /*background-color: #F2F0EC;*/
+
+a {
+  color: #6498CE;
+}
+
+hr {
+  border-color: #F2F0EC;
+}
+
+.button.button-primary {
+  background-color: #6498CE !important;
+  border-color: #6498CE !important;
 }
 
 section {
