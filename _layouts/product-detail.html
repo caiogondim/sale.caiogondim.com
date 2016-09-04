@@ -4,7 +4,7 @@ layout: base
 <section class="product-photos container">
   <h2>{{ page.product_name }}</h2>
   
-  {% for photo in page.product.photos %}
+  {% for photo in page.photos %}
     {% assign loop_index = forloop.index %}
     {% assign loop_index_mod_2 = forloop.index | modulo: 2 %}
     
