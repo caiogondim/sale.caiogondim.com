@@ -1,120 +1,46 @@
 ---
+layout: base
 ---
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-      body {
-        color: #393939;
-      }
-      .header__wrapper {
-        /*background-color: #F2F0EC;*/
-      }
-      
-      section {
-        padding: 5rem 0 !important;
-      }
-      
-      h1 {
-        margin-bottom: 10rem !important;
-      }
-      
-      h2 {
-        margin-bottom: 10rem !important;
-      }
-      
-      @media (max-width: 800px) {
-        .one-half.column {
-          width: 100%;
-        }
-      }
-      
-      /* -----------------------------------------------------------------------
-       * Product
-       * -------------------------------------------------------------------- */
-      .products.container {
-        
-      }
-
-      .product {
-        text-align: center;
-        padding: 2rem;
-        margin-bottom: 10rem;
-      }
-
-      .product-row {
-        
-      }
-      
-      .product__img {
-        border-radius: 2px;
-        -webkit-filter: saturate(0);
-        transition: all 0.1s ease;
-      }
-        .product__img:hover {
-          -webkit-filter: saturate(100%);
-        }
-      
-      .product__retail-price {
-        text-decoration: line-through;
-        color: #747369;
-        margin-bottom: 0;
-      }
-
-      .product__view-details-btn {
-         
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header__wrapper">
-      <section class="header container">
-        <div class=" row">
-          <h1>Farewell sale</h1>
-        </div>
-        <p class="row">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-          officiis vel ex facere animi hic praesentium optio minus veritatis
-          magnam cumque repudiandae reprehenderit debitis, nostrum inventore
-          esse dignissimos nihil quasi.
-        </p>
-      </section>
+<div class="header__wrapper">
+  <section class="header container">
+    <div class=" row">
+      <h1>Farewell sale</h1>
     </div>
-      
-    <hr>
-      
-    <section class="products container">
-      <h2>Products</h2>
-        {% for product in site.products %}
-          {% assign loop_index = forloop.index | modulo: 2 %}
-          {% if loop_index == 0 %}
-            <div class="product-row row">
-          {% else %}
+    <p class="row">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+      officiis vel ex facere animi hic praesentium optio minus veritatis
+      magnam cumque repudiandae reprehenderit debitis, nostrum inventore
+      esse dignissimos nihil quasi.
+    </p>
+  </section>
+</div>
+  
+<hr>
+  
+<section class="products container">
+  <h2>Products</h2>
+    {% for product in site.products %}
+      {% assign loop_index = forloop.index | modulo: 2 %}
+      {% if loop_index == 0 %}
+        <div class="product-row row">
+      {% else %}
+        </div>
+      {% endif %}
+          <div class="product one-half column">
+            <a href="{{ product.link }}">
+              <img
+                src="/img/{{ product.photo }}"
+                alt="{{ product.title }}"
+                class="u-max-full-width product__img"
+              />
+            </a>
+            <h3>{{ product.name }}</h3>
+            <p class="product__retail-price">€ {{ product.price_retail}}</p>
+            <h4 class="product__selling-price">€ {{ product.price }}</h4>
+            <div class="row">
+              <a href="{{ product.link }}" class="button">View details</a>
             </div>
-          {% endif %}
-              <div class="product one-half column">
-                <a href="{{ product.link }}">
-                  <img
-                    src="/img/{{ product.photo }}"
-                    alt="{{ product.title }}"
-                    class="u-max-full-width product__img"
-                  />
-                </a>
-                <h3>{{ product.name }}</h3>
-                <p class="product__retail-price">€ {{ product.price_retail}}</p>
-                <h4 class="product__selling-price">€ {{ product.price }}</h4>
-                <div class="row">
-                  <a href="{{ product.link }}" class="button">View details</a>
-                </div>
-              </div>
-            </div>
-        {% endfor %}
-    </section>
-
-  </body>
-</html>
+          </div>
+        </div>
+    {% endfor %}
+</section>

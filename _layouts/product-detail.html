@@ -1,79 +1,66 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-      <section class="product-photos container">
-        <h2>{{ page.product_name }}</h2>
-        
-        {% for photo in page.product.photos %}
-          {% assign loop_index = forloop.index %}
-          {% assign loop_index_mod_2 = forloop.index | modulo: 2 %}
-          
-          {% if loop_index == 1 %}
-            <div class="row">
-              <div class="twelve columns">
-                <a href="{{ photo }}" class="u-max-full-width">
-                  <img
-                    src="{{ photo }}"
-                    alt="{{ page.product_name }}"
-                    class="u-max-full-width product__img"
-                  />
-                </a>
-              </div>
-            </div>
-          {% else %}
-            {% if loop_index_mod_2 == 0 %}
-              <div class="row">
-            {% endif %}
-            
-              <div class="one-half column {{loop_index_mod_2 }}">
-                <a href="{{ photo }}" class="u-max-full-width">
-                  <img
-                    src="{{ photo }}"
-                    alt="{{ page.product_name }}"
-                    class="u-max-full-width product__img"
-                  />
-                </a>
-              </div>
-            
-            {% if loop_index_mod_2 == 1 %}
-              </div>
-            {% endif %}
-            
-          {% endif %}
-          
-        {% endfor %}
-        
-      </section>
-      
-      <section class="product-price container">
-        <!-- <h3>Price</h3> -->
-        <p class="product__retail-price">€ {{ page.price_retail }}</p>
-        <h4 class="product__selling-price">€ {{ page.price }}</h4>
-        <a href="" class="button button-primary">Buy</a>
-      </section>
-      
-      <section class="product-details container">
-        <h3>Details</h3>
-        <ul>
-          <li>Lorem</li>
-          <li>Ipsum</li>
-          <li>Dolor</li>
-        </ul>
-      </section>
-      
-      <hr>
-      
-      <section class="footer container">
-        <a href="" class="footer__link">Home</a>
-        <a href="" class="footer__link">Other items</a>
-        <a href="" class="footer__link">Sold out items</a>
-      </section>
+---
+layout: base
+---
+<section class="product-photos container">
+  <h2>{{ page.product_name }}</h2>
+  
+  {% for photo in page.product.photos %}
+    {% assign loop_index = forloop.index %}
+    {% assign loop_index_mod_2 = forloop.index | modulo: 2 %}
     
-  </body>
-</html>
+    {% if loop_index == 1 %}
+      <div class="row">
+        <div class="twelve columns">
+          <a href="{{ photo }}" class="u-max-full-width">
+            <img
+              src="{{ photo }}"
+              alt="{{ page.product_name }}"
+              class="u-max-full-width product__img"
+            />
+          </a>
+        </div>
+      </div>
+    {% else %}
+      {% if loop_index_mod_2 == 0 %}
+        <div class="row">
+      {% endif %}
+      
+        <div class="one-half column {{loop_index_mod_2 }}">
+          <a href="{{ photo }}" class="u-max-full-width">
+            <img
+              src="{{ photo }}"
+              alt="{{ page.product_name }}"
+              class="u-max-full-width product__img"
+            />
+          </a>
+        </div>
+      
+      {% if loop_index_mod_2 == 1 %}
+        </div>
+      {% endif %}
+      
+    {% endif %}
+    
+  {% endfor %}
+  
+</section>
+
+<section class="product-price container">
+  <!-- <h3>Price</h3> -->
+  <p class="product__retail-price">€ {{ page.price_retail }}</p>
+  <h4 class="product__selling-price">€ {{ page.price }}</h4>
+  <a href="" class="button button-primary">Buy</a>
+</section>
+
+<section class="product-details container">
+  <h3>Details</h3>
+  <ul>
+    <li>Lorem</li>
+    <li>Ipsum</li>
+    <li>Dolor</li>
+  </ul>
+</section>
+
+<hr>
+
+{% include footer.html %}
