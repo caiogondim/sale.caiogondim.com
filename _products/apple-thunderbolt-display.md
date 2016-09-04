@@ -14,4 +14,11 @@ details:
   - 'Native Resolution: 2560 x 1440'
   - 'Contrast Ratio: 1000:1'
   - 'Backlight Technology: LED backlight'
+references:
+  -
+    name: Wikipedia
+    link: 'https://en.wikipedia.org/wiki/Apple_Thunderbolt_Display'
+  -
+    name: Amazon
+    link: 'https://www.amazon.com/Apple-MC914LL-27-inch-Thunderbolt-Display/dp/B004YLCKYA'
 ---

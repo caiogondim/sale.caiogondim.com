@@ -15,4 +15,11 @@ details:
   - 'Perfect for vocals, musical instruments, podcasting, voiceovers, interviews, field recordings, conference calls'
   - 'Plug n play'
   - 'Bit Rate: 16bit'
+references:
+  -
+    name: 'B&H ★★★★☆'
+    link: 'https://www.bhphotovideo.com/c/product/857749-REG/Blue_YETI_Yeti_Multi_Pattern_USB_Microphone.html'
+  -
+    name: 'Product page'
+    link: 'http://www.bluemic.com/products/yeti/'
 ---

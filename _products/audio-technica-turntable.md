@@ -13,4 +13,15 @@ details:
   - 'USB output—connects directly to your computer for plug-&-play use'
   - 'Mac- and PC-compatible Audacity software digitizes your LPs'
   - 'Direct drive high-torque motor'
+references:
+  -
+    name: 'Vinyl Harmony ★★★★★ review'
+    link: 'http://www.vinylharmony.com/audio-technica-at-lp-120-usb-review/'
+  -
+    name: 'CNET ★★★★☆ review'
+    link: 'http://www.cnet.com/products/audio-technica-atlp120-professional-turntable-with-usb/review/'
+  -
+    name: 'Product page'
+    link: 'http://www.audio-technica.com/cms/turntables/583f30b3a8662772/'
+
 ---

@@ -71,6 +71,17 @@ layout: base
   </section>
 {% endif %}
 
+{% if page.references %}
+  <section class="product-details container">
+    <h3>References</h3>
+    <ul>
+      {% for reference in page.references %}
+        <li><a href="{{ reference.link }}">{{ reference.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
 <hr>
 
 {% include header.html %}

@@ -21,4 +21,11 @@ details:
   - User-friendly colour display
   - High resolution scanning
   - FAX
+references:
+  -
+    name: 'Expert Reviews UK ★★★★★'
+    link: 'http://www.expertreviews.co.uk/printers/53021/canon-pixma-mx925-review'
+  -
+    name: 'Product page'
+    link: 'http://www.canon-europe.com/printers/inkjet/pixma/pixma_mx925/'
 ---

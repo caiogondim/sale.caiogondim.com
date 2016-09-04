@@ -15,4 +15,14 @@ details:
   - 'Hand-built cabinets'
   - 'Enhanced thermal management'
   - 'Works with any computer'
+references:
+  -
+    name: 'What Hi Fi ★★★★★ review'
+    link: 'http://www.whathifi.com/audioengine/a5/review'
+  -
+    name: 'CNET ★★★★☆ review'
+    link: 'http://www.cnet.com/products/audioengine-5/review/'
+  -
+    name: 'Product page'
+    link: 'http://audioengineusa.com/Store/Powered-Speaker-Systems/A5-plus-Powered-Speakers'
 ---

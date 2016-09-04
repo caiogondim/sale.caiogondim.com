@@ -14,4 +14,8 @@ details:
   - '8 assignable knobs for manipulating virtual instruments and plugins'
   - 'Assignable fader lets you mix your productions with ease'
   - 'Transport buttons let you control your daw without reaching for the mouse'
+references:
+  -
+    name: 'Product page'
+    link: 'http://www.m-audio.com/products/view/oxygen-25'  
 ---

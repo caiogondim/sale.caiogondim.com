@@ -15,4 +15,11 @@ details:
   - 3.5mm input
   - Designed by Jony Ive
   - Part of the permanent collection on MoMA NYC
+references:
+  -
+    name: 'MoMA'
+    link: 'http://www.moma.org/collection/artists/22563?locale=en'
+  -
+    name: 'Product page'
+    link: 'http://www.harmankardon.com/computer-speakers/SOUNDSTICKS+III.html'
 ---
