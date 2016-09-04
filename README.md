@@ -1,3 +1,4 @@
 ## Tasks
 
-- `bundle exec jekyll`
+- `bundle exec jekyll build`
+- `$ bundle exec jekyll serve --watch`
