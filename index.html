@@ -21,10 +21,8 @@ layout: base
   <h2>Products</h2>
     {% for product in site.products %}
       {% assign loop_index = forloop.index | modulo: 2 %}
-      {% if loop_index == 0 %}
+      {% if loop_index == 1 %}
         <div class="product-row row">
-      {% else %}
-        </div>
       {% endif %}
           <div class="product one-half column">
             <a href="{{ product.link }}">
@@ -41,6 +39,8 @@ layout: base
               <a href="{{ product.link }}" class="button">View details</a>
             </div>
           </div>
+      {% if loop_index == 0 %}
         </div>
+      {% endif %}
     {% endfor %}
 </section>
