@@ -1,0 +1,35 @@
+---
+---
+@import 'vendor/normalize';
+@import 'vendor/skeleton';
+
+@import 'components/footer';
+@import 'components/header';
+@import 'components/product-detail';
+@import 'components/product-list';
+
+@import 'pages/index';
+@import 'pages/product-details';
+
+/* -----------------------------------------------------------------------------
+ * Global
+ * -------------------------------------------------------------------------- */
+
+body {
+  color: #393939;
+}
+.header__wrapper {
+  /*background-color: #F2F0EC;*/
+}
+
+section {
+  padding: 5rem 0 !important;
+}
+
+h1 {
+  margin-bottom: 10rem !important;
+}
+
+h2 {
+  margin-bottom: 10rem !important;
+}

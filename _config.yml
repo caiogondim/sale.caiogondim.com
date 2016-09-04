@@ -30,3 +30,6 @@ markdown: kramdown
 collections:
   products:
     output: true
+
+sass:
+  sass_dir: css/_sass
