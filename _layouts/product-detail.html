@@ -57,14 +57,21 @@ layout: base
   <!-- <h3>Price</h3> -->
   <p class="product__retail-price">€ {{ page.price_retail }}</p>
   <h4 class="product__selling-price">€ {{ page.price }}</h4>
-  <a
-    href="mailto:me@caiogondim.com"
+
+  {% if page.availability == 'sold_out' %}
+    <span
+  {% else %}
+    <a href="mailto:me@caiogondim.com"
+  {% endif %}
     class="button button-primary"
     {% if page.availability == 'sold_out' %}
       style="
         background-color: #F78D8C !important;
         color: white !important;
         border-color: #F78D8C !important;
+        {% if page.availability == 'sold_out' %}
+        cursor: initial;
+        {% endif %}
       "
     {% endif %}
   >
@@ -73,7 +80,11 @@ layout: base
     {% else %}
       Buy
     {% endif %}
-  </a>
+  {% if page.availability == 'sold_out' %}
+    </span>
+  {% else %}
+    </a>
+  {% endif %}
 </section>
 
 {% if page.details %}
