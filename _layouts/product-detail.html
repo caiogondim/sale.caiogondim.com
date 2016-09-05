@@ -57,7 +57,23 @@ layout: base
   <!-- <h3>Price</h3> -->
   <p class="product__retail-price">€ {{ page.price_retail }}</p>
   <h4 class="product__selling-price">€ {{ page.price }}</h4>
-  <a href="mailto:me@caiogondim.com" class="button button-primary">Buy</a>
+  <a
+    href="mailto:me@caiogondim.com"
+    class="button button-primary"
+    {% if page.availability == 'sold_out' %}
+      style="
+        background-color: #F78D8C !important;
+        color: white !important;
+        border-color: #F78D8C !important;
+      "
+    {% endif %}
+  >
+    {% if page.availability == 'sold_out' %}
+      Sold out
+    {% else %}
+      Buy
+    {% endif %}
+  </a>
 </section>
 
 {% if page.details %}
