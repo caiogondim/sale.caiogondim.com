@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Audio Technica AT-LP1'
 price_retail: 295
 price: 180
-categories: available
+availability: available
 photos:
   - '/img/audio-technica-at-lp1.jpg'
 link: '/products/audio-technica-turntable.html'

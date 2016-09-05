@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Nespresso Krups Inissia'
 price_retail: 99
 price: 50
-categories: available
+availability: available
 description: >
   Espresso machine compatible with Nespresso capsules.
 photos:

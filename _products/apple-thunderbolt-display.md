@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Apple Thunderbolt display'
 price_retail: 999
 price: 600
-categories: available
+availability: available
 photos:
   - '/img/apple-thunderbolt-display.jpg'
 link: '/products/apple-thunderbolt-display.html'

@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Canon Pixma MX925'
 price_retail: 139.99
 price: 90
-categories: available
+availability: available
 description: >
   I barely used this printer. Bought it mainly to print and scan some
   documents. Still brand new with all ink cartridges full.

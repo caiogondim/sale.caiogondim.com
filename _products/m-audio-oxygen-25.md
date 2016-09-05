@@ -3,7 +3,7 @@ layout: product-detail
 name: 'M-Audio Oxygen 25'
 price_retail: 99
 price: 50
-categories: available
+availability: sold_out
 photos:
   - '/img/m-audio-oxygen-25.jpg'
 link: '/products/m-audio-oxygen-25.html'

@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Harman Kardon Soundsticks'
 price_retail: 179
 price: 100
-categories: available
+availability: sold_out
 description: >
   Beautiful 3 piece speaker designed by Jony Ive. I used it plugged
   on the turntable and wirelessly (through bluetooth) to the Apple TV.
