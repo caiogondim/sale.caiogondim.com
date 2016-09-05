@@ -8,79 +8,81 @@ layout: base
   
 <section class="products container" id="products">
   <h2>Products</h2>
-    {% for product in site.products %}
-      {% if product.availability == 'available' %}
-        {% assign loop_index = forloop.index | modulo: 2 %}
-        {% if loop_index == 1 %}
-          <div class="product-row row">
-        {% endif %}
-            <div class="product one-half column">
-              <a href="{{ product.link }}">
-                <img
-                  src="{{ product.photos[0] }}"
-                  alt="{{ product.name }}"
-                  class="u-max-full-width product__img"
-                />
-              </a>
-              <h3>{{ product.name }}</h3>
-              <p class="product__retail-price">€ {{ product.price_retail}}</p>
-              <h4 class="product__selling-price">€ {{ product.price }}</h4>
-              <div class="row {{product.ttttt}} YYYYY">
-                <a
-                  href="{{ product.link }}"
-                  class="button"
-                >
-                  View details
-                </a>
-              </div>
-            </div>
-        {% if loop_index == 0 %}
+
+  {% for product in site.products %}{% if product.availability == 'available' %}
+    {% comment %} Don't know why, but Jekyll (liquid?) is outputing the below `increment` {% endcomment %}
+    <!-- {% increment products_loop_index %} -->
+    {% assign is_odd = products_loop_index | modulo: 2 %}
+    {% if is_odd == 1 %}
+      <div class="product-row row">
+    {% endif %}
+        <div class="product one-half column">
+          <a href="{{ product.link }}">
+            <img
+              src="{{ product.photos[0] }}"
+              alt="{{ product.name }}"
+              class="u-max-full-width product__img"
+            />
+          </a>
+          <h3>{{ product.name }}</h3>
+          <p class="product__retail-price">€ {{ product.price_retail}}</p>
+          <h4 class="product__selling-price">€ {{ product.price }}</h4>
+          <div class="row">
+            <a
+              href="{{ product.link }}"
+              class="button"
+            >
+              View details
+            </a>
           </div>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+        </div>
+    {% if is_odd == 0 %}
+      </div>
+    {% endif %}
+  {% endif %}{% endfor %}
 </section>
 
 <hr>
 
 <section class="products container" id="sold-out">
   <h2>Sold out</h2>
-    {% for product in site.products %}
-      {% if product.availability == 'sold_out' %}
-        {% assign loop_index = forloop.index | modulo: 2 %}
-        {% if loop_index == 1 %}
-          <div class="product-row row">
-        {% endif %}
-            <div class="product one-half column">
-              <a href="{{ product.link }}">
-                <img
-                  src="{{ product.photos[0] }}"
-                  alt="{{ product.name }}"
-                  class="u-max-full-width product__img"
-                />
-              </a>
-              <h3>{{ product.name }}</h3>
-              <p class="product__retail-price">€ {{ product.price_retail}}</p>
-              <h4 class="product__selling-price">€ {{ product.price }}</h4>
-              <div class="row">
-                <a
-                  href="{{ product.link }}"
-                  class="button"
-                  style="
-                    background-color: #F78D8C;
-                    color: white;
-                    border-color: #F78D8C;
-                  "
-                >
-                  Sold out
-                </a>
-              </div>
-            </div>
-        {% if loop_index == 0 %}
-          </div>
-        {% endif %}
+
+  {% for product in site.products %}{% if product.availability == 'sold_out' %}
+    {% comment %} Don't know why, but Jekyll (liquid?) is outputing the below `increment` {% endcomment %}
+    <!-- {% increment sold_out_loop_index %} -->
+      {% assign is_odd = sold_out_loop_index | modulo: 2 %}
+      {% if is_odd == 1 %}
+        <div class="product-row row">
       {% endif %}
-    {% endfor %}
+          <div class="product one-half column">
+            <a href="{{ product.link }}">
+              <img
+                src="{{ product.photos[0] }}"
+                alt="{{ product.name }}"
+                class="u-max-full-width product__img"
+              />
+            </a>
+            <h3>{{ product.name }}</h3>
+            <p class="product__retail-price">€ {{ product.price_retail}}</p>
+            <h4 class="product__selling-price">€ {{ product.price }}</h4>
+            <div class="row">
+              <a
+                href="{{ product.link }}"
+                class="button"
+                style="
+                  background-color: #F78D8C;
+                  color: white;
+                  border-color: #F78D8C;
+                "
+              >
+                Sold out
+              </a>
+            </div>
+          </div>
+      {% if is_odd == 0 %}
+        </div>
+      {% endif %}
+    {% endif %}{% endfor %}
 </section>
 
 <hr>
