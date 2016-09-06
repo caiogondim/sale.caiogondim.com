@@ -6,7 +6,7 @@ layout: base
 <hr>
 
 <section class="product-photos container" id="product">
-  <h2>{{ page.name }}</h2>
+  <h1>{{ page.name }}</h1>
   <div class="row">
     <p>
       {{ page.description }}
@@ -54,9 +54,8 @@ layout: base
 </section>
 
 <section class="product-price container">
-  <!-- <h3>Price</h3> -->
   <p class="product__retail-price">€ {{ page.price_retail }}</p>
-  <h4 class="product__selling-price">€ {{ page.price }}</h4>
+  <h3 class="product__selling-price">€ {{ page.price }}</h3>
 
   {% if page.availability == 'sold_out' %}
     <span
@@ -89,7 +88,7 @@ layout: base
 
 {% if page.details %}
   <section class="product-details container">
-    <h3>Details</h3>
+    <h2>Details</h2>
     <ul>
       {% for detail in page.details %}
         <li>{{ detail }}</li>
@@ -100,7 +99,7 @@ layout: base
 
 {% if page.references %}
   <section class="product-details container">
-    <h3>References</h3>
+    <h2>References</h2>
     <ul>
       {% for reference in page.references %}
         <li><a href="{{ reference.link }}">{{ reference.name }}</a></li>
