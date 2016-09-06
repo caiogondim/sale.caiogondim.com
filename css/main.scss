@@ -53,6 +53,12 @@ hr {
   margin: 0;
 }
 
-.product-row:last-child .product:last-child {
+.product-row:last-child .product {
   margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .product-row:last-child .product:last-child {
+    margin-bottom: 0;
+  }
 }
