@@ -58,6 +58,9 @@ hr {
 }
 
 @media (max-width: 800px) {
+  .product-row:last-child .product {
+    margin-bottom: 10rem;
+  }
   .product-row:last-child .product:last-child {
     margin-bottom: 0;
   }
