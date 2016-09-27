@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Audio Engine A5'
 price_retail: 399
 price: 250
-availability: available
+availability: sold_out
 photos:
   - '/img/audio-engine-a5.jpg'
 link: '/products/audio-engine-a5.html'

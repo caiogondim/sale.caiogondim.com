@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Apple wireless keyboard'
 price_retail: 120
 price: 60
-availability: available
+availability: sold_out
 photos:
   - '/img/apple-wireless-keyboard.jpg'
 link: '/products/apple-wireless-keyboard.html'
