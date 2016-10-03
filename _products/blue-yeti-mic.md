@@ -3,7 +3,7 @@ layout: product-detail
 name: 'Blue Yeti mic'
 price_retail: 150
 price: 80
-availability: available
+availability: sold_out
 description: '#1 best seller mic on Amazon.'
 photos:
   - '/img/blue-yeti-1.jpg'

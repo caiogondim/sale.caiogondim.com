@@ -3,7 +3,7 @@ layout: product-detail
 name: 'IKEA office chair'
 price_retail: 200.00
 price: 100
-availability: available
+availability: sold_out
 description: ''
 photos:
   - '/img/ikea-office-chair-1.jpg'
