@@ -48,6 +48,49 @@ layout: base
 
 <hr>
 
+<section class="products container" id="sold-out">
+  <h1>Sold out</h1>
+
+  {% for product in site.products %}{% if product.availability == 'sold_out' %}
+    {% comment %} Don't know why, but Jekyll (liquid?) is outputing the below `increment` {% endcomment %}
+    <!-- {% increment sold_out_loop_index %} -->
+      {% assign is_odd = sold_out_loop_index | modulo: 2 %}
+      {% if is_odd == 1 %}
+        <div class="product-row row">
+      {% endif %}
+          <div class="product one-half column">
+            <a href="{{ product.link }}#product">
+              <img
+                src="{{ product.photos[0] }}"
+                alt="{{ product.name }}"
+                class="u-max-full-width product__img"
+              />
+            </a>
+            <h3>{{ product.name }}</h3>
+            <p class="product__retail-price">€ {{ product.price_retail}}</p>
+            <h4 class="product__selling-price">€ {{ product.price }}</h4>
+            <div class="row">
+              <a
+                href="{{ product.link }}#product"
+                class="button"
+                style="
+                  background-color: #F78D8C;
+                  color: white;
+                  border-color: #F78D8C;
+                "
+              >
+                Sold out
+              </a>
+            </div>
+          </div>
+      {% if is_odd == 0 %}
+        </div>
+      {% endif %}
+    {% endif %}{% endfor %}
+</section>
+
+<hr>
+
 {% include nav.html %}
 
 <script>
