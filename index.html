@@ -49,3 +49,18 @@ layout: base
 <hr>
 
 {% include nav.html %}
+
+<script>
+  if (location.hash === '') {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var nav = document.querySelector('#nav')
+      var navHeight = nav.getBoundingClientRect().height
+
+      window.scrollTo(0, navHeight)
+    })
+  }
+</script>
