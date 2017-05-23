@@ -12,11 +12,11 @@ layout: base
       {{ page.description }}
     </p>
   </div>
-  
+
   {% for photo in page.photos %}
     {% assign loop_index = forloop.index %}
     {% assign loop_index_mod_2 = forloop.index | modulo: 2 %}
-    
+
     {% if loop_index == 1 %}
       <div class="row product__gallery-row">
         <div class="twelve columns gallery__photo">
@@ -33,7 +33,7 @@ layout: base
       {% if loop_index_mod_2 == 0 %}
         <div class="row product__gallery-row">
       {% endif %}
-      
+
         <div class="one-half column gallery__photo">
           <a href="{{ photo }}" class="u-max-full-width">
             <img
@@ -43,19 +43,19 @@ layout: base
             />
           </a>
         </div>
-      
+
       {% if loop_index_mod_2 == 1 %}
         </div>
       {% endif %}
-      
+
     {% endif %}
-    
+
   {% endfor %}
 </section>
 
 <section class="product-price container">
-  <p class="product__retail-price">€ {{ page.price_retail }}</p>
-  <h3 class="product__selling-price">€ {{ page.price }}</h3>
+  <p class="product__retail-price">R$ {{ page.price_retail }}</p>
+  <h3 class="product__selling-price">R$ {{ page.price }}</h3>
 
   {% if page.availability == 'sold_out' %}
     <span
