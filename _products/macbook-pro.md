@@ -1,8 +1,8 @@
 ---
 layout: product-detail
 name: 'MacBook Pro 15'
-price_retail: 4000
-price: 3500
+price_retail: '4,000'
+price: '3,500'
 availability: available
 photos:
   - '/img/macbook-pro-1.jpg'

@@ -1,7 +1,7 @@
 ---
 layout: product-detail
 name: 'Blue Yeti mic'
-price_retail: 1000
+price_retail: '1,000'
 price: 700
 availability: available
 description: '#1 best seller mic on Amazon.'

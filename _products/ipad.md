@@ -1,8 +1,8 @@
 ---
 layout: product-detail
 name: 'iPad mini 2 retina 16GB'
-price_retail: 1200
-price: 1000
+price_retail: '1,200'
+price: '1,000'
 availability: available
 photos:
   - '/img/ipad-1.jpg'
