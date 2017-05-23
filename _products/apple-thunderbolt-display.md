@@ -1,13 +1,13 @@
 ---
 layout: product-detail
 name: 'Apple Thunderbolt display'
-price_retail: 999
-price: 600
+price_retail: 4000
+price: 3500
 availability: available
 photos:
   - '/img/apple-thunderbolt-display.jpg'
 link: '/products/apple-thunderbolt-display.html'
-description: 'Best display I ever used.'
+description: 'Best display I ever used. This is the last model designed by Apple.'
 details:
   - 'Display Type: LED-backlit LCD monitor / TFT active matrix'
   - 'Built-in Devices: Camera, USB Hub, Speaker'
