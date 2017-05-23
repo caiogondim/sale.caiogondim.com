@@ -17,6 +17,7 @@ details:
   - 'Hi-Res 15 inches 1440 x 900 matte screen'
   - '8GB RAM'
   - 'Intel Core i7'
+  - 'AMD Radeon HD 6490M 256MB'
 references:
   -
     name: Apple
